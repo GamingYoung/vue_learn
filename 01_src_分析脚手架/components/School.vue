@@ -1,5 +1,5 @@
 <template>
-    <div class="school">
+    <div class="demo">
       <h2>学校名称：{{ name }}</h2>
       <h2>学校地址：{{ address }}</h2>
       <button @click="showName">点我提示学校名</button>
@@ -7,7 +7,6 @@
   </template>
   
   <script>
-  import {a, b} from './mixinExample'
   export default {
       name:'Student',
       data(){
@@ -20,13 +19,12 @@
         showName(){
             alert(this.name)
         }
-      },
-      mixins:[a,b]
+      }
   }
   </script>
   
   <style>
-    .school {
+    .demo{
         background-color: orange;
     }
   </style>

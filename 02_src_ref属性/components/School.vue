@@ -7,7 +7,6 @@
   </template>
   
   <script>
-  import {a, b} from './mixinExample'
   export default {
       name:'Student',
       data(){
@@ -20,8 +19,7 @@
         showName(){
             alert(this.name)
         }
-      },
-      mixins:[a,b]
+      }
   }
   </script>
   
