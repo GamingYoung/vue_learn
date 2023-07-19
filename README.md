@@ -71,3 +71,27 @@
     作用：让样式在局部生效，防止冲突
     写法：<style scoped>
 
+## 总结TodoList案例
+    1.组件化编码流程：
+        1.拆分静态组件：组件要按照功能点拆分，命名不要与Html元素冲突
+        2.实现动态组件：考虑好数据的存放位置，数据是一个组件在用，还是一些组件再用：
+            1.一个组件再用：放在组件自身即可
+            2.一些组件再用：放在他们的共同的父组件上（状态提升）
+        3.实现交互：从绑定事件开始
+    2.props适用于：
+        1.父组件==>子组件通信
+        2.子组件==>父组件通信（要求父先给子一个函数）
+    3.使用v-model时要切记：v-model绑定的值不能是props传过来的值，因为props不可修改
+
+## 浏览器本地存储webStorage
+    1.JSON.stringfy():将Json文件以字符串的形式存储；
+    2.存储内容大小一般支持5M左右（不同浏览器可能不一样）
+    3.浏览器通过Window.sessionStorage和Window.localStorage属性来实现本地存储机制
+    4.相关API：
+        1.xxStorage.setItem('key', 'value');添加存储
+        2.xxStorage.getItem('key');返回键名对应的值
+        3.xxStorage.removeItem('key');删除该健
+        4.xxStorage.clear();清空存储中所有数据
+    5.SessionStorage存储的内容会随着浏览器窗口关闭而消失；LocalStorage需是手动清除才会消失
+    6.xxStorage.getItem(xxx)如果xxx对应的value获取不到，那么getItem的返回值是null
+
